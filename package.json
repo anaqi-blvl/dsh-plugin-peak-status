@@ -1,0 +1,29 @@
+{
+  "name": "dsh-peak-status",
+  "version": "0.1.0",
+  "description": "DeepSeek peak/off-peak rate clock for the dsh web GUI: a mini status widget above the sidebar settings button with a modal for windows, countdown and rates (client plugin)",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-primitives",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "immediately": true
+    }
+  },
+  "license": "MIT"
+}
